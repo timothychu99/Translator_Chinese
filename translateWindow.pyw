@@ -12,8 +12,8 @@ h_s.pack(side='bottom', fill='x')
 canvas1 = tk.Canvas(root, width = 400, height = 160, bg = 'dark grey')
 canvas1.pack()
 
-entry1 = tk.Entry(root, bg = 'black', fg = 'light green')
-entry1.configure(highlightbackground = "black", font=("Times New Roman", 15))
+entry1 = tk.Entry(root, bg = 'black', fg = 'light green', width = 15)
+entry1.configure(highlightbackground = "black", font=("Times New Roman", 16))
 canvas1.create_window(200, 10, window=entry1)
 
 #translate button/enter
@@ -35,8 +35,8 @@ def on_hover(l, h2, i):
 
     input_text_area.configure(highlightbackground = "black", font=("Times New Roman", 16))
 
-    frame = canvas1.create_window(345, 16, window=input_text_area)
-    canvas1.itemconfig(frame, width = 120, height = 30)
+    frame = canvas1.create_window(344, 16, window=input_text_area)
+    canvas1.itemconfig(frame, width = 116, height = 30)
     input_text_area.delete("1.0", tk.END)
     x = frtrans3(h2[i]).splitlines()
     input_text_area.insert("1.0", " " + x[0] + " : " + x[1])
@@ -46,8 +46,8 @@ def on_hover(l, h2, i):
 
     ta_2.configure(highlightbackground = "black", font=("Times New Roman", 16))
 
-    f2 = canvas1.create_window(60, 16, window=ta_2)
-    canvas1.itemconfig(f2, width = 120, height = 30)
+    f2 = canvas1.create_window(58, 16, window=ta_2)
+    canvas1.itemconfig(f2, width = 116, height = 30)
     ta_2.delete("1.0", tk.END)
     x2 = frtrans4(h2[i]).splitlines()
     ta_2.insert("1.0", " " + x2[0] + " : " + x2[1])
