@@ -36,7 +36,7 @@ def on_hover(l, h2, i):
     input_text_area.configure(highlightbackground = "black", font=("Times New Roman", 16))
 
     frame = canvas1.create_window(344, 16, window=input_text_area)
-    canvas1.itemconfig(frame, width = 116, height = 30)
+    canvas1.itemconfig(frame, width = 119, height = 30)
     input_text_area.delete("1.0", tk.END)
     x = frtrans3(h2[i]).splitlines()
     input_text_area.insert("1.0", " " + x[0] + " : " + x[1])
