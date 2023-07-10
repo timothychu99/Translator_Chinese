@@ -2,7 +2,7 @@
 import tkinter as tk
 from tkinter import Tk
 import signal
-from translate import frtrans, frtrans2, frtrans3, voice, transer, count
+from translate import frtrans, frtrans2, frtrans3, frtrans4, voice, transer, count
 
 root= tk.Tk()
 
@@ -35,12 +35,22 @@ def on_hover(l, h2, i):
 
     input_text_area.configure(highlightbackground = "black", font=("Times New Roman", 16))
 
-    frame = canvas1.create_window(340, 16, window=input_text_area)
-    canvas1.itemconfig(frame, width = 130, height = 30)
+    frame = canvas1.create_window(345, 16, window=input_text_area)
+    canvas1.itemconfig(frame, width = 120, height = 30)
     input_text_area.delete("1.0", tk.END)
     x = frtrans3(h2[i]).splitlines()
     input_text_area.insert("1.0", " " + x[0] + " : " + x[1])
     input_text_area.config(state='disabled')
+
+    ta_2 = tk.Text(root, pady = 0, width = 20, height = 20, bg='black', fg='light green')
+
+    ta_2.configure(highlightbackground = "black", font=("Times New Roman", 16))
+
+    f2 = canvas1.create_window(60, 16, window=ta_2)
+    canvas1.itemconfig(f2, width = 120, height = 30)
+    ta_2.delete("1.0", tk.END)
+    x2 = frtrans4(h2[i]).splitlines()
+    ta_2.insert("1.0", " " + x2[0] + " : " + x2[1])
 
 def go(event):
     entry1.delete(0, tk.END)

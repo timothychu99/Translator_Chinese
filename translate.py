@@ -43,6 +43,9 @@ def frtrans2(inputs):
 def frtrans3(ini):
   return ini + "\n" + translate(ini, 'en')
 
+def frtrans4(ini):
+  return pinyin_jyutping_sentence.jyutping(ini) + "\n" + pinyin_jyutping_sentence.pinyin(ini)
+
 def transer():
   return Translate.transret()
 
